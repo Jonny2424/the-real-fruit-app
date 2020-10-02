@@ -1,0 +1,29 @@
+body {
+    background-color:lemonchiffon;
+}
+
+header {
+    background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+}
+
+#show-page {
+  background-color: rgb(211, 194, 44);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+#wrapper {
+  border: 5px solid black;
+  border-radius: 16px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 25vh;
+}
+

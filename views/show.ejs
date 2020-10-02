@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/app.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body id="show-page">
+    <div id="wrapper">
+    <h1>Fruits Show Page</h1>
+    The <%= fruit.name %> is <%= fruit.color %>.
+    <br /><br />
+    <% if (fruit.readyToEat === true) { %>
+    It is ready to eat
+    <% } else { %>
+    It is not ready to eat
+    <% } %>
+    <br /><br />
+    It is added by <%= fruit.User.name %>
+    <br /><br />
+    <h3>It is available in Seasons:</h3>
+    <div id="list">
+    <ul>
+    <% for (let i=0; i< fruit.Seasons.length; i++){ %>
+        <li>
+           <%=fruit.Seasons[i].name%>
+        </li>
+        <br>
+    <% } %>
+    </ul>
+    </div>
+</div>
+</body>
+
+</html>

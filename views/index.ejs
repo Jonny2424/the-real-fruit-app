@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/app.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+    <h1>Welcome to Fruits App</h1>
+    <nav>
+        <a href="/fruits/new">Create a New Fruit</a>
+    </nav>
+    </header>
+    <ul>
+        <% for(let i=0; i<fruits.length; i++) { %>
+        <li>
+            <a href="/fruits/<%=fruits[i].id%>"><%=fruits[i].name%></a>
+            <form action="/fruits/<%=i; %>?_method=DELETE" method="POST">
+                <input type="submit" value="delete" />
+            </form>
+            <a href="/fruits/<%=fruits[i].id%>/edit">Edit</a>
+        </li>
+        <br />
+        <% } %>
+
+    </ul>
+</body>
+
+</html>
